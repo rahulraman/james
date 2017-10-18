@@ -1,7 +1,8 @@
 module.exports = function (mongoose) {
 
-    var dbURI = 'mongodb://122.176.20.171:27017/chat';
-    mongoose.Promise = global.Promise;
+   // var dbURI = 'mongodb://122.176.20.171:27017/chat';
+   var dbURI = 'mongodb://localhost/chat';
+   mongoose.Promise = global.Promise;
     var connection = mongoose.createConnection(dbURI, { server: { poolSize: 5 } });
 
     // When successfully connected
