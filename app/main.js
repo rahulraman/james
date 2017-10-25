@@ -26,7 +26,7 @@ module.exports = function (models) {
             }
         });
     }
-    var getTags = function () {
+    var getTags = function (res) {
         Tag.find({}, function (err, tags) {
             if (err) {
                 res.json({ 'success': false, 'error': 'Connection error. Please try again.' });
@@ -300,6 +300,8 @@ module.exports = function (models) {
             });
             dataPro.saveThing(res, newTag, function () {
                 getTags(res);
+                //res.sendFile(res);
+                //res.json({ 'success': false, 'error': 'The feed does not exist.' });
             });
         },
         change_tag: function (req, res) {
