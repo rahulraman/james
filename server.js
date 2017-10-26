@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var connection = require('./config/database')(mongoose);
 var models = require('./models/models')(connection);
 var app = express();
-//app.set('port', 8080);
+app.set('port', 8080);
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use(bodyParser.json({ limit: '10mb' }));
