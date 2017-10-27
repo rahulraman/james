@@ -3,7 +3,7 @@ var http = require('http');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.Promise = Promise;  
+
 var connection = require('./config/database')(mongoose);
 var models = require('./models/models')(connection);
 var app = express();
